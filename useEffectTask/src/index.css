@@ -1,4 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1 {
+  color: beige;
+}
+nav {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  background: linear-gradient(to right, red, yellow);
+}
+nav ul {
+  display: flex;
+  gap: 10px;
+  font-weight: bold;
+}
+a {
+  display: flex;
+  align-items: center;
+  border: 1px solid transparent;
+  background-color: rgba(255, 0, 0, 0.319);
+  padding: 5px;
+  border-radius: 5px;
+  color: beige;
+  text-transform: capitalize;
+  text-decoration: none;
+}
 .products {
+  background: linear-gradient(to top, yellow, antiquewhite);
+}
+
+.productsCont {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -6,11 +40,13 @@
 .cards {
   border: 1px solid black;
   border-radius: 10px;
+  color:;
   /* text-decoration: none; */
   width: 300px;
   display: flex;
   flex-direction: column;
-  
+  align-items: center;
+  padding: 10px;
 }
 
 .cards img {

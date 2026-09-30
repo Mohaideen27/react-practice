@@ -4,12 +4,11 @@ import Users from "./components/Users";
 import Products from "./components/Products";
 
 const App = () => {
-  
   return (
     <div>
       <BrowserRouter>
         <nav>
-          <h2>useEffect Task</h2>
+          <h1>useEffect Task</h1>
           <ul>
             <Link to="/">products</Link>
             <Link to="/users">users</Link>
