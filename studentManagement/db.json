@@ -1,13 +1,12 @@
 {
   "students": [
     {
-      "sname": "sameer",
-      "sid": "123",
-      "semail": "sameer@gmail.com",
-      "phNo": "9003820934",
+      "sname": "mohaideen",
+      "sid": "007",
+      "semail": "MOHAIDEENMECH27@GMAIL.COM",
+      "phNo": "09003820934",
       "dept": "mech",
-      "phNO": "2",
-      "id": "t70Rq_XqqYI"
+      "id": "a_Zky_wkEnU"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

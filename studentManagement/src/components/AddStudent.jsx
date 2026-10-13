@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
+import {
+  addStudent,
+  getStudents,
+} from "../services/studentServices";
 
 const AddStudent = () => {
   let [student, setStudent] = useState({
@@ -24,11 +28,12 @@ const AddStudent = () => {
         return alert("fill all the input fields");
 
       console.log(student);
-      await axios.post("http://localhost:3000/students", student);
+      await addStudent(student);
       alert("Register done successfullyl");
     } catch (err) {
       console.log(err);
     }
+  
   };
   return (
     <div className="addStudent">
