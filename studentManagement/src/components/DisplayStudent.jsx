@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { getStudents, deleteStudent } from "../services/studentServices";
-import { data } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const DisplayStudents = () => {
+  let Navigate = useNavigate();
   let [students, setStudents] = useState([]);
   let fetchStudents = async () => {
     try {
@@ -18,6 +19,9 @@ const DisplayStudents = () => {
   useEffect(() => {
     fetchStudents();
   }, []);
+  let handleEdit = (id) => {
+    Navigate(`/edit/${id}`);
+  };
   let handleDelete = async (id) => {
     try {
       await deleteStudent(id);
@@ -52,7 +56,7 @@ const DisplayStudents = () => {
                 <td>{student.dept} </td>
                 <td>{student.phNo} </td>
                 <td>
-                  <button>edit</button>
+                  <button onClick={() => handleEdit(student.id)}>edit</button>
                 </td>
                 <td>
                   <button onClick={() => handleDelete(student.id)}>

@@ -20,6 +20,16 @@ export const addStudent = async (payload) => {
   }
 };
 
+export const getStudentById = async (id) => {
+  try {
+    let res = await api.get(`/students/${id}`);
+    return res.data;
+  } catch (err) {
+    console.log(err);
+    // throw err;
+  }
+};
+
 export const deleteStudent = async (id) => {
   try {
     let res = await api.delete(`/students/${id}`);
