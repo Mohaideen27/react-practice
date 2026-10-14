@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { addStudent, getStudentById } from "../services/studentServices";
+import {
+  addStudent,
+  getStudentById,
+  updateStudent,
+} from "../services/studentServices";
 
 const EditStudent = () => {
   let [student, setStudent] = useState({
@@ -12,7 +16,6 @@ const EditStudent = () => {
   });
   let { sname, sid, semail, phNo, dept } = student;
   const { id } = useParams();
-  console.log(id);
   let fetchStudent = async () => {
     try {
       let data = await getStudentById(id);
@@ -32,11 +35,11 @@ const EditStudent = () => {
   let handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      if (!sname || !sid || !semail || !phno || !dept)
+      if (!sname || !sid || !semail || !phNo || !dept)
         return alert("Fill all the inputs");
       console.log(student);
-      await addStudent(student);
-      alert("register done");
+      await updateStudent(id, student);
+      alert("update done");
       setStudent({
         sname: "",
         sid: "",

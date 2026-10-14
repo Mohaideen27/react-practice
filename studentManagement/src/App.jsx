@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import AddStudent from "./components/AddStudent";
 import DisplayStudent from "./components/DisplayStudent";
+import EditStudent from "./components/EditStudent";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<DisplayStudent />}></Route>
           <Route path="/add" element={<AddStudent />}></Route>
+          <Route path="/edit/:id" element={<EditStudent />}></Route>
         </Routes>
       </BrowserRouter>
     </>

@@ -4,7 +4,7 @@ import { getStudents, deleteStudent } from "../services/studentServices";
 import { useNavigate } from "react-router-dom";
 
 const DisplayStudents = () => {
-  let Navigate = useNavigate();
+  let navigate = useNavigate();
   let [students, setStudents] = useState([]);
   let fetchStudents = async () => {
     try {
@@ -20,7 +20,7 @@ const DisplayStudents = () => {
     fetchStudents();
   }, []);
   let handleEdit = (id) => {
-    Navigate(`/edit/${id}`);
+    navigate(`/edit/${id}`);
   };
   let handleDelete = async (id) => {
     try {

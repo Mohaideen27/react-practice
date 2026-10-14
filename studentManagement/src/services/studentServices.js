@@ -20,6 +20,15 @@ export const addStudent = async (payload) => {
   }
 };
 
+export const updateStudent = async (id, payload) => {
+  try {
+    let res = await api.put(`/students/${id}`, payload);
+    return res.data;
+  } catch (err) {
+    console.log(err);
+  }
+};
+
 export const getStudentById = async (id) => {
   try {
     let res = await api.get(`/students/${id}`);
